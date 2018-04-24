@@ -13,7 +13,7 @@ _Milestone 1_
 supervised models for 2 UD languages with evaluation and analysis.
 
 _Milestone 2_
-* semi-supervised or unsupervised models for at least 5 UD languages with evaluation.
+* semi-supervised or unsupervised models for at least 2 UD languages with evaluation.
 * registered implementation at PyPi.
 
 ## Resources
