@@ -9,6 +9,7 @@ Lemmatization tools often require linguistic expertise and are usually based on 
 ## Roadmap
 
 _Milestone 1_
+
 supervised models for 2 UD languages with evaluation and analysis.
 
 _Milestone 2_
@@ -20,6 +21,7 @@ _Milestone 2_
 For training and evaluation:
 
 UD treebanks: http://universaldependencies.org/
+
 Word embeddings: https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md 
 
 ## Related Work
