@@ -45,10 +45,10 @@ _Results for Finnish:_
 
 | Model       | Accuracy | BLEU |
 |-------------|:--------:|-----:|
-| identity    |  52.77%  |      |
-| most common |  74.01%  |      |
-| linear reg. |  80.12%  |      |
-| transformer |    -     |   -  |
+| identity    |  52.77%  |  -   |
+| most common |  74.01%  |  -   |
+| linear reg. |  80.12%  |  -   |
+| transformer |    -     |  -   |
 
 _*Word-level seq2seq without attention did not produce any meaningful results._
 
