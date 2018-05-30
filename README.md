@@ -38,7 +38,7 @@ _Results for English:_
 |-------------|:--------:|-----:|
 | identity    |  78.55%  |  0.579  |
 | most common |  91.63%  |  0.764  |
-| linear reg. |  88.71%  | -    |
+| linear reg. |  88.71%  |  0.685  |
 | transformer |    -     |  0.439  |
 
 _Results for Finnish:_
