@@ -54,9 +54,9 @@ _*Word-level seq2seq without attention did not produce any meaningful results._
 
 ## Conclusion and Avenues for Further Research
 
-It can be clearly seen that advanced deep learning models do not perform well in this task, with the main reason being limited training data. However, a simple linear regression model demonstrates results very close to the strong baseline, and for Finnish even surpass its performance. The regressor learns to lemmatize not only very common words such as 'are', 'got', 'was' etc, but also learns certain relations (e.g. 'killed'-'kill', 'said'-'say'  'years'-'year'). The model also demonstrates capability to lemmatize unseen wordforms (e.g. 'submitted'-'submit', 'replacing'-'replace'). With adjustments and improvements that will enable use of context information, there is a good chance to beat both baselines.
+It can be clearly seen that advanced deep learning models do not perform well in this task, with the main reason being limited training data. However, a simple linear regression model demonstrates results very close to the strong baseline, and for Finnish even outperforms it. The regressor learns to lemmatize not only very common words such as 'are', 'got', 'was' etc, but also learns certain relations (e.g. 'killed'-'kill', 'said'-'say'  'years'-'year'). The model also demonstrates capability to lemmatize unseen wordforms (e.g. 'submitted'-'submit', 'replacing'-'replace'). With adjustments and improvements that will enable use of context information, there is a good chance to beat both baselines.
 
-To further research efficiency of advanced deep learning models, it could be useful to experiment with the following models:
+For further research of advanced deep learning approaches' efficiency, it could be useful to experiment with the following models:
 - Word-level seq2seq with attention
 - Char-level seq2seq with attention
 - DeepMind's Relation networks
