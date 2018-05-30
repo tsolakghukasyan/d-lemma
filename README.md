@@ -35,7 +35,7 @@ Two languages were selected for training and evaluation of aforementioned models
 _Results for English:_
 
 | Model       | Accuracy | BLEU |
-|-------------|:--------:|-----:|
+|-------------|:--------:|:-----:|
 | identity    |  78.55%  |  0.579  |
 | most common |  91.63%  |  0.764  |
 | linear reg. |  88.71%  |  0.685  |
@@ -44,10 +44,10 @@ _Results for English:_
 _Results for Finnish:_
 
 | Model       | Accuracy | BLEU |
-|-------------|:--------:|-----:|
-| identity    |  52.77%  |  -   |
-| most common |  74.01%  |  -   |
-| linear reg. |  80.12%  |  -   |
+|-------------|:--------:|:-----:|
+| identity    |  52.77%  |  0.128  |
+| most common |  74.01%  |  0.285  |
+| linear reg. |  80.12%  |  0.389  |
 | transformer |    -     |  -   |
 
 _*Word-level seq2seq without attention did not produce any meaningful results._
