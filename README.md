@@ -24,7 +24,7 @@ One of the main models that were developed was a linear regressor with cosine pr
 A word level sequence-to-sequence model using LSTM cells. This model receives sequence of tokens as input and produces the sequence of their lemmas.
 
 - _Transformer_\
-An encoder-decoder model based on self-attention mechanism, introduced by Google in [Attention Is All You Need](https://arxiv.org/abs/1706.03762). Transformer networks  Similar to seq2seq, it processes a sequence of tokens to output a sequence of lemmas.
+An encoder-decoder model based on self-attention mechanism, introduced by Google in [Attention Is All You Need](https://arxiv.org/abs/1706.03762). Similar to seq2seq, it processes a sequence of input tokens to output the sequence of their lemmas.
 
 
 ## Training & Evaluation
