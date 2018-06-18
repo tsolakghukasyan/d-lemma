@@ -91,7 +91,9 @@ Word embeddings: [fasttext.cc/docs/en/pretrained-vectors.html](https://fasttext.
 
 ## Related Work
 
-[*A Neural Lemmatizer for Bengali*](https://pdfs.semanticscholar.org/12c6/1ee4f804d4007fc12cfd0d13ba260c051e48.pdf) - Abhisek Chakrabarty et al. 
+[*A Neural Lemmatizer for Bengali*](https://pdfs.semanticscholar.org/12c6/1ee4f804d4007fc12cfd0d13ba260c051e48.pdf)  
+Abhisek Chakrabarty et al. 
 
-[*Context Sensitive Lemmatization Using Two Successive Bidirectional Gated Recurrent Networks*](http://www.aclweb.org/anthology/P17-1136) - Abhisek Chakrabarty et al.
+[*Context Sensitive Lemmatization Using Two Successive Bidirectional Gated Recurrent Networks*](http://www.aclweb.org/anthology/P17-1136)  
+Abhisek Chakrabarty et al.
 
