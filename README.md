@@ -13,7 +13,7 @@ d-lemma models support a growing set of languages - lemma-annotated UD treebanks
 
 ## Approaches
 
-In this project, 5 different approaches were considered.
+In this project, 6 different approaches were considered.
 
 To understand the evaluation of the developed learning models, 2 baseline approaches are used:
 
@@ -23,13 +23,16 @@ Identity function, i.e. returning the input token as its lemma, serves as a weak
 - _Most common lemma with identity backoff_\
 Returning the most common lemma serves as a stronger baseline for developed models. This baseline backs off to identity for unknown words.
 
-The 3 learning models are:
+The 4 learning models are:
 
 - _Linear regression_\
 A linear regressor with cosine proximity loss that for each input token tries to produce its lemma's embedding.  
 
+- _Regression with LSTM_\
+A recurrent neural network with single LSTM unit that receives the sequence of input tokens' embeddings and produces the embeddings of their lemmas.  
+
 - _Seq2seq_\
-A word level sequence-to-sequence model using LSTM cells. This model receives sequence of tokens as input and produces the sequence of their lemmas.
+A word level sequence-to-sequence model using LSTM cells. This model receives a sequence of tokens as input and produces the sequence of their lemmas.
 
 - _Transformer_\
 An encoder-decoder model based on self-attention mechanism, introduced by Google in [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762). Similar to seq2seq, it processes a sequence of input tokens to output the sequence of their lemmas.
@@ -49,6 +52,7 @@ _Results for English:_
 | identity    |  78.55%  |  0.579  |
 | most common |  91.63%  |  0.764  |
 | linear reg. |  88.71%  |  0.685  |
+| LSTM |  92.7%  |  -  |
 | transformer |    -     |  0.439  |
 
 _Results for Finnish:_
@@ -58,6 +62,7 @@ _Results for Finnish:_
 | identity    |  52.77%  |  0.128  |
 | most common |  74.01%  |  0.285  |
 | linear reg. |  80.12%  |  0.389  |
+| LSTM |  75.07%  |  -  |
 | transformer |    -     |  -   |
 
 _*Word-level seq2seq without attention did not produce any meaningful results._
