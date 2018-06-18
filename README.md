@@ -5,7 +5,11 @@ Project advisor: Adam Mathias Bittlingmayer
 
 ## Introduction
 
-Lemmatization tools often require linguistic expertise and are usually based on rules and lookup tables. To break the linguistic barrier, this project aims to utilise annotated text datasets and word embeddings and develop a universal model for lemmatization. Since there are lemma-annotated UD treebanks and fastText embeddings publicly available for over 60 different languages, the proposed project can be used to train lemmatization models for dozens of languages.
+Lemmatization tools are still usually [implemented with rules and lookup tables even in today's top libraries](https://spacy.io/usage/adding-languages#lemmatizer), which require linguistic knowledge of each language to build.
+
+**d-lemma** is developing simple universal models for *learning* lemmatization, using only annotated text datasets and word embeddings.
+
+d-lemma models support a growing set of languages - lemma-annotated UD treebanks and fastText embeddings are publicly available for over 60 different languages.
 
 ## Models
 
