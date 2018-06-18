@@ -1,4 +1,4 @@
-# Lemmatisation using Deep Learning
+# Lemmatization using Deep Learning
 
 Author: Tsolak Ghukasyan\
 Project advisor: Adam Mathias Bittlingmayer
