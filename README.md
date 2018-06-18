@@ -59,9 +59,9 @@ _Results for Finnish:_
 
 | Model       | Accuracy | BLEU |
 |-------------|:--------:|:-----:|
-| identity    |  52.77%  |  0.128  |
-| most common |  74.01%  |  0.285  |
-| linear reg. |  80.12%  |  0.389  |
+| identity    |  47.35%  |  0.128  |
+| most common |  66.50%  |  0.285  |
+| linear reg. |  73.15%  |  0.389  |
 | LSTM |  75.07%  |  -  |
 | transformer |    -     |  -   |
 
