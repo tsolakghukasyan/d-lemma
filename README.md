@@ -29,7 +29,7 @@ The 4 learning models are:
 A linear regressor with cosine proximity loss that for each input token tries to produce its lemma's embedding.  
 
 - _Regression with LSTM_\
-A recurrent neural network with single LSTM unit that receives the sequence of input tokens' embeddings and produces the embeddings of their lemmas.  
+A recurrent neural network with a single LSTM unit that receives the sequence of input tokens' embeddings and produces the embeddings of their lemmas.  
 
 - _Seq2seq_\
 A word level sequence-to-sequence model using LSTM cells. This model receives a sequence of tokens as input and produces the sequence of their lemmas.
@@ -49,10 +49,10 @@ _Results for English:_
 
 | Model       | Accuracy | BLEU |
 |-------------|:--------:|:-----:|
-| identity    |  78.55%  |  0.579  |
-| most common |  91.63%  |  0.764  |
-| linear reg. |  88.71%  |  0.685  |
-| LSTM |  92.7%  |  -  |
+| identity    |  78.15%  |  0.579  |
+| most common |  91.40%  |  0.773  |
+| linear reg. |  87.55%  |  0.685  |
+| LSTM |  **93.0%**  |  -  |
 | transformer |    -     |  0.439  |
 
 _Results for Finnish:_
@@ -62,20 +62,33 @@ _Results for Finnish:_
 | identity    |  47.35%  |  0.128  |
 | most common |  66.50%  |  0.285  |
 | linear reg. |  73.15%  |  0.389  |
-| LSTM |  75.07%  |  -  |
+| LSTM | **75.07%**  |  -  |
 | transformer |    -     |  -   |
 
 _*Word-level seq2seq without attention did not produce any meaningful results._
 
 Because the output of transformer and seq2seq models is of variable length, it may contain a different number or order of tokens than the input, so it is not possible to give a token-level accuracy score.
 
+Sample output of the learned LSTM lemmatizer for English:
+
+```python
+>>> lemmatize("I knew him because he had attended my school .".split(' '))
+['I', 'know', 'he', 'because', 'he', 'have', 'attend', 'my', 'school', '.']
+```
+
+## Training Models for New Languages
+
+The linear and LSTM regressors can be easily adapted for new languages.
+
+To train and evaluate a new model, you can use ```linear_models.ipynb```, ```lstm_model.ipynb``` Jupyter notebooks. All you need to do is set the paths to the CoNLL-U treebanks and word embeddings files at the beginning of the notebook (n.b. only _FORM_ and _LEMMA_ columns of the treebank are used).
+
 ## Conclusion
 
-It can be clearly seen that advanced deep learning models do not perform well in this task, with the main reason being limited training data.
+It can be clearly seen that advanced deep learning models do not perform well in this task, with the main reasons being limited training data and difficulty of hyperparameter tuning.
 
-However, a simple linear regression model demonstrates results very close to the strong baseline, and for Finnish even outperforms it.
+At the same time, a simple linear regression model demonstrates results very close to the strong baseline, and for Finnish even outperforms it. Among considered approaches the highest accuracy was achieved with the LSTM network, which beat both baselines for both languages.
 
-The regressor learns to lemmatize not only very common words such as 'are', 'got', 'was' etc, but also learns certain relations (e.g. 'killed'-'kill', 'said'-'say'  'years'-'year').  The model also demonstrates capability to lemmatize unseen wordforms (e.g. 'submitted'-'submit', 'replacing'-'replace').  With adjustments and improvements that will enable use of context information, there is a good chance to beat both baselines.
+The regressors learn to lemmatize not only very common words such as 'are', 'got', 'was' etc, but also seem to learn certain relations (e.g. 'killed'-'kill', 'said'-'say'  'years'-'year').  In addition, these models demonstrate capability to lemmatize unseen wordforms (e.g. 'submitted'-'submit', 'replacing'-'replace').
 
 ## Future Work
 
@@ -92,7 +105,9 @@ For training and evaluation:
 
 UD treebanks: [universaldependencies.org](http://universaldependencies.org/)
 
-Word embeddings: [fasttext.cc/docs/en/pretrained-vectors.html](https://fasttext.cc/docs/en/pretrained-vectors.html)
+Word embeddings:
+- _for Finnish, the vectors trained on Common Crawl and Wikipedia:_ [fasttext.cc/docs/en/crawl-vectors.html](https://fasttext.cc/docs/en/crawl-vectors.html)
+- _for English, the vectors trained on Common Crawl (600B tokens):_ [fasttext.cc/docs/en/english-vectors.html](https://fasttext.cc/docs/en/english-vectors.html)
 
 ## Related Work
 
