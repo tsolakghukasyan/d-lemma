@@ -76,7 +76,7 @@ Sample output of the learned LSTM lemmatizer for English:
 ['I', 'know', 'he', 'because', 'he', 'have', 'attend', 'my', 'school', '.']
 ```
 
-## Training Models for New Languages
+## Training Lemmatizers for New Languages
 
 The linear and LSTM regressors can be easily adapted for new languages.
 
