@@ -43,7 +43,7 @@ Other model ideas were also considered such as LSTM networks with softmax layers
 
 Two languages were selected for training and evaluation of the aforementioned models: English as a relatively low-morphology language and Finnish as a high-morphology language.
 
-Since one of this project's goals is developing a lemmatization model for low-resource languages, the models were trained with only a 10000-token subset of the respective UD treebanks.
+Since one of this project's goals is developing a lemmatization model for low-resource languages, the models were trained with only a 10000-token subset of the respective UD treebanks and another 2000 tokens for validation. Below are the evaluation results on 2000-token test sets:
 
 _Results for English:_
 
