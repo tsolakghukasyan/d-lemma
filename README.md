@@ -26,7 +26,7 @@ Returning the most common lemma serves as a stronger baseline for developed mode
 The 4 learning models are:
 
 - _Linear regression_\
-A linear regressor with cosine proximity loss that for each input token tries to produce its lemma's embedding. This lemmatizer does not consider the context of the token during prediction.    
+A linear regressor with cosine proximity loss that for each input token tries to produce its lemma's embedding. This lemmatizer does not use contextual information during prediction.    
 
 - _Regression with LSTM_\
 A recurrent neural network with a single LSTM unit that receives the sequence of input tokens' embeddings and produces the embeddings of their lemmas.  
